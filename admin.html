@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>APL Admin Dashboard</title>
+
+<link rel="stylesheet" href="admin.css">
+
+</head>
+
+
+<body>
+
+
+<h1>🏏 APL Admin Dashboard</h1>
+
+<div style="text-align:right; margin:10px 20px;">
+    <button id="logoutBtn"
+    style="
+    background:red;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;">
+    🚪 Logout
+    </button>
+
+    <button onclick="window.location.href='recycle.html'"
+    style="
+    background:#555;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+    margin-left:10px;">
+    🗑 Recycle Bin
+    </button>
+</div>
+
+<div class="summary">
+
+
+<div class="card total">
+<h3>Total Teams</h3>
+<h2 id="totalTeams">0</h2>
+</div>
+
+
+<div class="card pending">
+<h3>Pending</h3>
+<h2 id="pendingTeams">0</h2>
+</div>
+
+
+<div class="card approved">
+<h3>Approved</h3>
+<h2 id="approvedTeams">0</h2>
+</div>
+
+
+<div class="card rejected">
+<h3>Rejected</h3>
+<h2 id="rejectedTeams">0</h2>
+</div>
+
+
+</div>
+
+<div class="match-control" style="margin:20px;">
+
+<h3>🏏 Match Control</h3>
+
+<h2>✅ Matches Played:
+<span id="adminMatchesPlayed">0</span>
+</h2>
+
+<h2>⏳ Remaining Matches:
+<span id="adminRemainingMatches">28</span>
+</h2>
+
+<button id="completeMatchBtn">
+✅ Mark Match Completed
+</button>
+
+</div>
+
+<div class="match-control" style="margin:20px;">
+<h3>📡 Live Match Update</h3>
+
+<input type="text" id="teamA" placeholder="Team A"><br><br>
+<input type="text" id="teamB" placeholder="Team B"><br><br>
+
+<input type="text" id="scoreA" placeholder="Score A"><br><br>
+<input type="text" id="scoreB" placeholder="Score B"><br><br>
+
+<input type="text" id="oversA" placeholder="Overs A"><br><br>
+<input type="text" id="oversB" placeholder="Overs B"><br><br>
+
+<input type="text" id="target" placeholder="Target"><br><br>
+
+<input type="text" id="status" placeholder="Status"><br><br>
+
+<button id="updateLiveBtn">📡 Update Live Match</button>
+</div>
+
+<div class="search-box">
+
+<input 
+type="text"
+id="searchInput"
+placeholder="Search Team Name / Apply ID / Mobile Number">
+
+</div>
+
+
+
+
+
+<table>
+
+
+<thead>
+
+<tr>
+    <th>Sl No</th>
+    
+    <th>Date & Time</th>
+    
+    <th>Apply ID</th>
+    
+    <th>Team Name</th>
+    
+    <th>Captain</th>
+    
+    <th>Mobile</th>
+    
+    <th>Area</th>
+    
+    <th>Address</th>
+    
+    <th>UPI Transaction ID</th>
+    
+    <th>Payment Status</th>
+    
+    <th>Status</th>
+    
+    <th>Action</th>
+    
+    <th>Remarks</th>
+    
+    <th> Email Id</th>
+</tr>
+
+</thead>
+
+
+
+<tbody id="registrationTable">
+
+
+<tr>
+  <td colspan="14">
+    Loading...
+  </td>
+</tr>
+
+
+</tbody>
+
+
+</table>
+
+
+
+
+<script type="module" src="admin.js"></script>
+
+
+</body>
+
+</html>
